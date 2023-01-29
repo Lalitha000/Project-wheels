@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css?family=Varta:wght@300;400;500&display=swap');
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;
+}
+::-webkit-scrollbar {
+  width: 0;  /* Remove scrollbar space */
+  background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background:#8a8a41
+}
+
+.main {
+
+  width: 1152px;
+  height: 720px;
+
+  position: relative;
+  /* transform: translate(8%,10%); */
+  top: 0px;
+  right: 0px;
+  background-image: url("./images/bg-cover.png");
+}
+
+#slider {
+  width: 91%;
+  margin: 0 auto;
+  position: relative;
+  top: 70px;
+  height: fit-content;
+  overflow: hidden;
+
+}
+h4{
+  margin: 6px;
+  font-family: 'Varta';
+}
+span{
+  font-size: 13px;
+  font-family: 'Varta';
+}
+.cardactive span{
+  font-size: 15px;
+  font-family: 'Varta';
+}
+.title h2 {
+  font-family: 'Varta';
+  font-style: normal;
+  font-weight: 400;
+  border-left: 8px solid black;
+  padding: 9px;
+}
+p{
+
+  font-family: 'Varta';
+  font-style: italic;;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.column {
+  flex: 1;
+  color: white;
+}
+
+.content {
+
+  width: 600px;
+  margin: 16px;
+  text-align: justify;
+  font-size: 16px;
+}
+
+
+#slider .slide {
+  display: flex;
+  width: 100%;
+  height: fit-content;
+
+}
+
+.column {
+  /* flex: 1; */
+  color: white;
+  text-align: -webkit-center;
+  text-align: -moz-center;
+  /* text-align: center; */
+}
+
+.cardactive {
+  background-image: url("./images/wheel-bg.jpg");
+  border: 2px solid #d7cece;
+  border-radius: 20px;
+  text-align: -webkit-center;
+  text-align: -moz-center;
+
+}
+
+.cardactive .cardone {
+
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+
+}
+
+.cardactive .cardcontents {
+  color: black;
+  margin: 4%;
+
+  overflow: hidden;
+
+}
+
+.cardactive .cardcontents h4 {
+
+  color: black;
+  font-weight: bold;
+  font-size: 15px;
+  font-family: 'Varta';
+
+}
+
+.cardactive .cardcontents span {
+
+  color: black;
+  font-family: 'Varta';
+  font-style: normal;
+  font-weight: 400;
+
+
+}
+
+.cardcontents {
+
+  color: black;
+  margin: 11%;
+  font-family: 'Varta';
+  font-style: normal;
+  font-weight: 400;
+  overflow: hidden;
+}
+
+.cardcontents h4,
+h5 {
+  font-size: 12px;
+  font-family: 'Varta';
+}
+
+.cardone {
+
+  width: 200px;
+  height: 200px;
+  margin: 23px;
+}
+
+.cardone img {
+
+  width: 100%;
+  height: 100%;
+  margin-top: 18px;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.5;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.controls {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5em;
+  padding: 15px 10px;
+  border-radius: 5px;
+
+}
+
+.controls:hover {
+  background: white;
+  transition: 0.3s;
+}
+
+.controls:active {
+  color: grey;
+}
+
+#left-arrow {
+  left: 10px;
+  cursor: pointer;
+  /* background: #b3a4a4; */
+}
+
+#right-arrow {
+  right: 10px;
+  cursor: pointer;
+  /* background: #b3a4a4; */
+}
+
+
+
+@media (max-width:576px) {
+  #slider {
+    width: 100%;
+
+  }
+
+  .main {
+
+    width: 100%;
+    height: 100%;
+    background-image: none;
+
+  }
+
+  #slider .slide {
+
+    flex-direction: column;
+
+  }
+
+  .content {
+
+    width: 85%;
+    margin: 16px;
+    text-align: justify;
+    font-size: 16px;
+  }
+
+  .controls {
+    display: none;
+  }
+
+}
+
+@media only screen and (device-width: 768px) {
+
+  .main {
+
+    width: 100%;
+    height: 100%;
+
+  }
+
+  .controls {
+    display: none;
+  }
+
+}
+
+@media only screen and (max-device-width: 1024px) {
+
+  .main {
+
+    width: 100%;
+    height: 100%;
+
+
+  }
+
+  .controls {
+    display: none;
+  }
+}
+
+img {
+  cursor: pointer;
+transition: -webkit-transform 0.1s ease;
+transition: all .5s;
+-moz-transition: all .5s;
+-webkit-transition: all .5s;
+-o-transition: all .5s;
+-ms-transition: all .5s; 
+}
+img:focus {
+-webkit-transform: scale(1.1);
+-ms-transform: scale(1.1);
+}
